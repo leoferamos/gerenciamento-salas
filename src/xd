@@ -1,0 +1,47 @@
+<div style={{ marginTop: '40px', textAlign: 'center' }}>
+        <img
+          src="/images/uploadedwebclientlogo.jpg"
+          alt="Logo da Faculdade"
+          style={{ width: '150px', height: 'auto', marginBottom: '16px' }}
+        />
+        <p>Status: {status}</p>
+        <Button
+          variant={status === 'Aula em andamento' ? 'contained' : 'outlined'}
+          color="success"
+          onClick={() => handleStatusChange('Aula em andamento')}
+        >
+          Iniciar Aula
+        </Button>
+        <Button
+          variant={status === 'Intervalo' ? 'contained' : 'outlined'}
+          style={{
+            borderColor: 'yellow',
+            color: status === 'Intervalo' ? 'black' : 'black',
+            backgroundColor: status === 'Intervalo' ? 'yellow' : 'transparent',
+          }}
+          onClick={() => handleStatusChange('Intervalo')}
+        >
+          Intervalo
+        </Button>
+        <Button
+          variant={status === 'Aula finalizada' ? 'contained' : 'outlined'}
+          style={{
+            borderColor: 'black',
+            color: status === 'Aula finalizada' ? 'white' : 'black',
+            backgroundColor: status === 'Aula finalizada' ? 'black' : 'transparent',
+          }}
+          onClick={() => handleStatusChange('Aula finalizada')}
+        >
+          Finalizar Aula
+        </Button>
+        <Button
+          variant={status === 'Erro' ? 'contained' : 'outlined'}
+          color="error"
+          onClick={() => handleStatusChange('Erro')}
+        >
+          Erro
+        </Button>
+      </div>
+    </div>
+  );
+}
